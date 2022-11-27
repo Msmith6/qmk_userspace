@@ -1,15 +1,11 @@
 {
-  "version": 1,
-  "notes": "",
-  "documentation": "Model V keymap",
-  "keyboard": "matthewdias/model_v",
-  "keymap": "msmith6",
-  "layout": "LAYOUT_wrapper_bigbar",
-  "layers": [
-    ["Jetvan_BASE"],
-    ["Jetvan_LOWER"],
-    ["Jetvan_RAISE"],
-    ["Jetvan_MISC"]
-  ],
-  "author": ""
+    "keyboard": "matthewdias/model_v",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_bigbar",
+    "layers": [
+        ["Jetvan_BASE"],
+        ["Jetvan_LOWER"],
+        ["Jetvan_RAISE"],
+        ["Jetvan_MISC"]
+    ]
 }
