@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "notes": "",
+  "documentation": "THE30 wrapped based keymap",
+  "keyboard": "lazydesigners/the30",
+  "keymap": "msmith6",
+  "layout": "LAYOUT_wrapper_ortho_3x10",
+  "layers": [
+    ["THE30_BASE"],
+    ["THE30_LOWER"],
+    ["THE30_RAISE"],
+    ["THE30_MISC"]
+  ],
+  "author": ""
+}

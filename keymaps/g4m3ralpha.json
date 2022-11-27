@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "notes": "",
+    "documentation": "G4M3R Alpha keymap",
+    "keyboard": "wsk/g4m3ralpha",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_g4m3r",
+    "layers": [
+      ["G4M3RAlpha_BASE"],
+      ["G4M3RAlpha_LOWER"],
+      ["G4M3RAlpha_RAISE"],
+      ["G4M3RAlpha_MISC"],
+      ["G4M3RAlpha_GAME"],
+      ["G4M3RAlpha_GAME_EXTRA"]
+    ],
+    "author": ""
+  }

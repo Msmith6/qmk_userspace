@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "notes": "",
+    "documentation": "Pegasus keymap",
+    "keyboard": "pegasus",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_default",
+    "layers": [
+      ["Pegasus_BASE"],
+      ["Pegasus_LOWER"],
+      ["Pegasus_RAISE"],
+      ["Pegasus_MISC"]
+    ],
+    "author": ""
+  }
