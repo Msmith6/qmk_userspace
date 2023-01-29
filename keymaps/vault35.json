@@ -1,0 +1,11 @@
+{
+    "keyboard": "projectcain/vault35",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_vault35",
+    "layers": [
+        ["Vault35_BASE"],
+        ["Vault35_LOWER"],
+        ["Vault35_RAISE"],
+        ["Vault35_MISC"]
+    ]
+}

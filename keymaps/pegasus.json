@@ -1,7 +1,7 @@
 {
     "keyboard": "pegasus",
     "keymap": "msmith6",
-    "layout": "LAYOUT_default",
+    "layout": "LAYOUT_wrapper_pegasus",
     "layers": [
         ["Pegasus_BASE"],
         ["Pegasus_LOWER"],

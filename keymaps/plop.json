@@ -1,0 +1,12 @@
+{
+    "keyboard": "rainkeebs/plop",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_plop",
+    "layers": [
+        ["Plop_BASE"],
+        ["Plop_LOWER"],
+        ["Plop_RAISE"],
+        ["Plop_MISC"],
+        ["Plop_RGB"]
+    ]
+}

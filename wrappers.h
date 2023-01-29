@@ -3,6 +3,12 @@
 #define LAYOUT_wrapper_ortho_3x10(...) LAYOUT_ortho_3x10(__VA_ARGS__)
 #define LAYOUT_wrapper_bigbar(...) LAYOUT_bigbar(__VA_ARGS__)
 #define LAYOUT_wrapper_g4m3r(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_wrapper_vault35(...) LAYOUT_split_2space(__VA_ARGS__)
+#define LAYOUT_wrapper_pegasus(...) LAYOUT_default(__VA_ARGS__)
+#define LAYOUT_wrapper_plop(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_wrapper_hifinger75(...) LAYOUT_big_space_enter(__VA_ARGS__)
+#define LAYOUT_wrapper_lesovoz(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_wrapper_ribbon(...) LAYOUT_big_bar(__VA_ARGS__)
 
 #define _QWERTY 0
 #define _LOWER 1
@@ -46,7 +52,7 @@
 #define RAISE_ROW2              KC_LCTL, KC_LALT, _______, SFT_TAB, XXXXXXX, XXXXXXX, KC_LEFT, RSE_DWN,   KC_UP, KC_RGHT
 #define RAISE_ROW3              _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, KC_BSPC,  KC_DEL, XXXXXXX, KC_ENT
 
-#define MISC_ROW1               KC_F9, KC_F10, KC_F11, KC_F12, KC_RCTL, RESET, COL_BLCK, CPY_DOWN, CPY_UP, EXP_BLCK
+#define MISC_ROW1               KC_F9, KC_F10, KC_F11, KC_F12, KC_RCTL, QK_BOOT, COL_BLCK, CPY_DOWN, CPY_UP, EXP_BLCK
 #define MISC_ROW2               KC_F5, KC_F6, KC_F7, KC_F8, _______, _______, MV_LEFT, MV_DOWN, MV_UP, MV_RGHT
 #define MISC_ROW3               KC_F1, KC_F2, KC_F3, KC_F4, KC_RALT, XXXXXXX, DEL_LINE, XXXXXXX, XXXXXXX, _______
 
@@ -110,5 +116,86 @@ KC_LSFT, KC_Z, KC_X, LT(_GAME_EXTRA, KC_C), KC_SPC, KC_V, KC_B, CHAT_ENT
 #define G4M3RAlpha_GAME_EXTRA \
 ALT_1, ALT_2, ALT_3, ALT_4, ALT_5, \
 _______, _______, _______, _______,  KC_T, KC_PSCR, LALT(KC_F10), LALT(KC_F9), KC_O, KC_P, \
-_______, _______, _______, _______, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, \
+KC_ESC, _______, _______, _______, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, \
 KC_LALT, _______, KC_C, _______, _______, KC_B, KC_N, KC_M
+
+#define Vault35Layout(row1, row2, row3) \
+row1, XXXXXXX, \
+row2, \
+row3, \
+XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX
+
+#define Vault35_BASE  Vault35Layout(BASE_ROW1, BASE_ROW2, BASE_ROW3_REGULAR)
+#define Vault35_LOWER Vault35Layout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_REGULAR)
+#define Vault35_RAISE Vault35Layout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Vault35_MISC  Vault35Layout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+
+#define PlopLayout(row1, row2, row3) \
+KC_ESC, row1, KC_BSPC, \
+KC_TAB, row2, \
+KC_LSFT, row3, \
+KC_1, KC_2, KC_3, KC_0, KC_SPC, KC_4, KC_5, MO(4)
+
+#define Plop_BASE  PlopLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3_REGULAR)
+#define Plop_LOWER PlopLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_REGULAR)
+#define Plop_RAISE PlopLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Plop_MISC  PlopLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+#define Plop_RGB \
+RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+_______, _______, _______, _______, _______, _______, _______, _______
+
+
+#define HiFinger75Layout(row1, row2, row3) \
+KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_DEL, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, \
+KC_TAB, row1, CHAT_ENT, KC_P7, KC_P8, KC_P9, KC_PPLS, \
+KC_LCTL, row2, KC_P4, KC_P5, KC_P6, KC_PPLS, \
+KC_LSFT, XXXXXXX, row3, KC_UP, KC_P1, KC_P2, KC_P3, KC_PENT, \
+KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, TO(_GAME), KC_LEFT, KC_DOWN, KC_RGHT, KC_P0, KC_PDOT, KC_PENT
+
+#define HiFinger75_BASE  HiFinger75Layout(BASE_ROW1, BASE_ROW2, BASE_ROW3_REGULAR)
+#define HiFinger75_LOWER HiFinger75Layout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_REGULAR)
+#define HiFinger75_RAISE HiFinger75Layout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define HiFinger75_MISC  HiFinger75Layout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+
+#define HiFinger75_GAME \
+KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_DEL, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, \
+KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, CHAT_ENT, KC_P7, KC_P8, KC_P9, KC_PPLS, \
+KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_P4, KC_P5, KC_P6, KC_PPLS, \
+KC_LSFT, KC_SLSH, KC_Z, KC_X, LT(_GAME_EXTRA, KC_C), LT(_GAME_EXTRA, KC_V), KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_LSFT, KC_UP, KC_P1, KC_P2, KC_P3, KC_PENT, \
+KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, TG(_GAME), KC_LEFT, KC_DOWN, KC_RGHT, KC_P0, KC_PDOT, KC_PENT
+
+#define HiFinger75_GAME_EXTRA \
+_______, ALT_1, ALT_2, ALT_3, ALT_4, ALT_5, _______, _______, KC_PSCR, LALT(KC_F9), LALT(KC_F10), _______, _______, _______, _______, _______, _______, \
+_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+
+#define LesovozLayout(row1, row2, row3) \
+row1, \
+row2, \
+row3, \
+XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define Lesovoz_BASE  LesovozLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3_REGULAR)
+#define Lesovoz_LOWER LesovozLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_REGULAR)
+#define Lesovoz_RAISE LesovozLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Lesovoz_MISC  LesovozLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+
+#define RibbonLayout(row1, row2, row3) \
+KC_ESC, row1, KC_BSPC, \
+KC_TAB, row2, \
+KC_LSFT, row3, \
+XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, MO(4)
+
+#define Ribbon_BASE  RibbonLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3_REGULAR)
+#define Ribbon_LOWER RibbonLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_REGULAR)
+#define Ribbon_RAISE RibbonLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Ribbon_MISC  RibbonLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+#define Ribbon_RGB \
+RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+_______, _______, _______, _______, _______

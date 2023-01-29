@@ -1,5 +1,24 @@
 #include QMK_KEYBOARD_H
 
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+  switch (get_highest_layer(state)) {
+    case _GAME:
+#if defined(KEYBOARD_tdlab_hifinger75)
+        rgblight_setrgb(152, 251, 152);
+        rgblight_mode(RGBLIGHT_MODE_KNIGHT + 2);
+#endif
+        break;
+    default:
+#if defined(KEYBOARD_tdlab_hifinger75)
+        rgblight_setrgb(RGB_SPRINGGREEN);
+        rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+#endif
+        break;
+  }
+  return state;
+}
+
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case RSE_D:
@@ -60,11 +79,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
     case KC_ESC:
-      if (switch_back_to_game) {
-        switch_back_to_game = false;
-        layer_on(_GAME);
+      if (record->event.pressed) {
+        tap_code(KC_ESC);
+        if (switch_back_to_game) {
+          switch_back_to_game = false;
+          layer_on(_GAME);
+        }
       }
-      return true;
+      return false;
   }
   return true;
 }

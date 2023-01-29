@@ -1,0 +1,11 @@
+{
+    "keyboard": "lesovoz",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_lesovoz",
+    "layers": [
+        ["Lesovoz_BASE"],
+        ["Lesovoz_LOWER"],
+        ["Lesovoz_RAISE"],
+        ["Lesovoz_MISC"]
+    ]
+}

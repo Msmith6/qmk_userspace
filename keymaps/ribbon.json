@@ -1,0 +1,12 @@
+{
+    "keyboard": "misonoworks/ribbon",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_ribbon",
+    "layers": [
+        ["Ribbon_BASE"],
+        ["Ribbon_LOWER"],
+        ["Ribbon_RAISE"],
+        ["Ribbon_MISC"],
+        ["Ribbon_RGB"]
+    ]
+}

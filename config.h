@@ -12,4 +12,8 @@
 #define ALT_5 MY_SAFE_RANGE - 5
 #define CHAT_ENT MY_SAFE_RANGE - 6
 
+#if defined(KEYBOARD_tdlab_hifinger75)
+    #define RGBLIGHT_EFFECT_KNIGHT
+#endif
+
 #include "wrappers.h"

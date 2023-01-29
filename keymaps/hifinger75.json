@@ -1,0 +1,13 @@
+{
+    "keyboard": "tdlab/hifinger75",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_hifinger75",
+    "layers": [
+        ["HiFinger75_BASE"],
+        ["HiFinger75_LOWER"],
+        ["HiFinger75_RAISE"],
+        ["HiFinger75_MISC"],
+        ["HiFinger75_GAME"],
+        ["HiFinger75_GAME_EXTRA"]
+    ]
+}
