@@ -1,0 +1,11 @@
+{
+    "keyboard": "tominabox1/qaz",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_qaz",
+    "layers": [
+        ["QAZ_BASE"],
+        ["QAZ_LOWER"],
+        ["QAZ_RAISE"],
+        ["QAZ_MISC"]
+    ]
+}
