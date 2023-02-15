@@ -45,7 +45,7 @@
 #define BASE_ROW3_30PERCENT     LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_SPC, KC_N, KC_M,KC_COMM, RSFT_T(KC_DOT)
 #define BASE_ROW3_QAZ           LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_N, KC_M,KC_COMM, RSFT_T(KC_DOT)
 
-#define LOWER_ROW1              KC_ESC, KC_7, KC_8, KC_9, XXXXXXX, KC_GRV, KC_QUOT, KC_LPRN, KC_RPRN, KC_BSLASH
+#define LOWER_ROW1              KC_ESC, KC_7, KC_8, KC_9, XXXXXXX, KC_GRV, KC_QUOT, KC_LPRN, KC_RPRN, KC_BSLS
 #define LOWER_ROW2              LCTL_T(KC_0), KC_4, RSE_5, LWR_6, XXXXXXX, XXXXXXX, LWR_MIN, KC_EQL, KC_LBRC, KC_RBRC
 #define LOWER_ROW3              _______, KC_1, KC_2, KC_3, XXXXXXX, XXXXXXX, KC_BSPC, KC_COMM, KC_DOT, _______
 #define LOWER_ROW3_30PERCENT    _______, KC_1, KC_2, KC_3, XXXXXXX, _______, KC_BSPC, KC_SLSH, _______, _______
