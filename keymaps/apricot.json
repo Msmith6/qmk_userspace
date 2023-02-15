@@ -1,0 +1,11 @@
+{
+    "keyboard": "lazydesigners/apricot",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_apricot",
+    "layers": [
+        ["Apricot_BASE"],
+        ["Apricot_LOWER"],
+        ["Apricot_RAISE"],
+        ["Apricot_MISC"]
+    ]
+}

@@ -10,6 +10,7 @@
 #define LAYOUT_wrapper_lesovoz(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_wrapper_ribbon(...) LAYOUT_big_bar(__VA_ARGS__)
 #define LAYOUT_wrapper_qaz(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_wrapper_apricot(...) LAYOUT_wkl_big_bar(__VA_ARGS__)
 
 #define _QWERTY 0
 #define _LOWER 1
@@ -216,3 +217,14 @@ XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX
 #define QAZ_LOWER QAZLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_QAZ)
 #define QAZ_RAISE QAZLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3_QAZ)
 #define QAZ_MISC  QAZLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3_QAZ)
+
+#define ApricotLayout(row1, row2, row3) \
+row1, \
+row2, \
+row3, \
+RGB_HUI, KC_SPC, RGB_VAI
+
+#define Apricot_BASE  ApricotLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3_QAZ)
+#define Apricot_LOWER ApricotLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_QAZ)
+#define Apricot_RAISE ApricotLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3_QAZ)
+#define Apricot_MISC  ApricotLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3_QAZ)
