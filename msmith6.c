@@ -29,14 +29,14 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
-bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case LSFT_T(KC_Z):
     case RSFT_T(KC_DOT):
     case RSFT_T(KC_SLSH):
-      return false;
-    default:
       return true;
+    default:
+      return false;
   }
 }
 
