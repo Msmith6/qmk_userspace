@@ -19,13 +19,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 
-bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case RSE_D:
     case LWR_F:
-      return true;
+      return 0;
     default:
-      return false;
+      return QUICK_TAP_TERM;
   }
 }
 
