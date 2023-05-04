@@ -1,0 +1,11 @@
+{
+    "keyboard": "sonatina/cisne",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_cisne",
+    "layers": [
+        ["Cisne_BASE"],
+        ["Cisne_LOWER"],
+        ["Cisne_RAISE"],
+        ["Cisne_MISC"]
+    ]
+}

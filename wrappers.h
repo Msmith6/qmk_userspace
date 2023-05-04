@@ -11,6 +11,7 @@
 #define LAYOUT_wrapper_ribbon(...) LAYOUT_big_bar(__VA_ARGS__)
 #define LAYOUT_wrapper_qaz(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_wrapper_apricot(...) LAYOUT_wkl_big_bar(__VA_ARGS__)
+#define LAYOUT_wrapper_cisne(...) LAYOUT_big_enter(__VA_ARGS__)
 
 #define _QWERTY 0
 #define _LOWER 1
@@ -126,15 +127,20 @@ KC_ESC, _______, _______, _______, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, \
 KC_LALT, _______, KC_C, _______, _______, KC_B, KC_N, KC_M
 
 #define Vault35Layout(row1, row2, row3) \
-row1, XXXXXXX, \
+row1, MO(4), \
 row2, \
 row3, \
-XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX
+KC_1, XXXXXXX, KC_SPC, KC_2
 
 #define Vault35_BASE  Vault35Layout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
 #define Vault35_LOWER Vault35Layout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
 #define Vault35_RAISE Vault35Layout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
 #define Vault35_MISC  Vault35Layout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+#define Vault35_RGB \
+RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_5, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX
 
 #define PlopLayout(row1, row2, row3) \
 KC_ESC, row1, KC_BSPC, \
@@ -228,3 +234,14 @@ RGB_HUI, KC_SPC, RGB_VAI
 #define Apricot_LOWER ApricotLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_QAZ)
 #define Apricot_RAISE ApricotLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3_QAZ)
 #define Apricot_MISC  ApricotLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3_QAZ)
+
+#define CisneLayout(row1, row2, row3) \
+KC_ESC, row1, KC_BSPC, \
+KC_TAB, row2, \
+KC_LSFT, row3, KC_RSFT, \
+XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define Cisne_BASE  CisneLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
+#define Cisne_LOWER CisneLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
+#define Cisne_RAISE CisneLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Cisne_MISC  CisneLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
