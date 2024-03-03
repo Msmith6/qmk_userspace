@@ -3,7 +3,7 @@
 #define LAYOUT_wrapper_ortho_3x10(...) LAYOUT_ortho_3x10(__VA_ARGS__)
 #define LAYOUT_wrapper_bigbar(...) LAYOUT_bigbar(__VA_ARGS__)
 #define LAYOUT_wrapper_g4m3r(...) LAYOUT(__VA_ARGS__)
-#define LAYOUT_wrapper_vault35(...) LAYOUT_split_2space(__VA_ARGS__)
+#define LAYOUT_wrapper_vault35(...) LAYOUT_full_space(__VA_ARGS__)
 #define LAYOUT_wrapper_pegasus(...) LAYOUT_default(__VA_ARGS__)
 #define LAYOUT_wrapper_plop(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_wrapper_hifinger75(...) LAYOUT_big_space_enter(__VA_ARGS__)
@@ -132,7 +132,7 @@ KC_LALT, _______, KC_C, _______, _______, KC_B, KC_N, KC_M
 row1, MO(4), \
 row2, \
 row3, \
-KC_1, XXXXXXX, KC_SPC, KC_2
+KC_1, KC_SPC, KC_2
 
 #define Vault35_BASE  Vault35Layout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
 #define Vault35_LOWER Vault35Layout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
@@ -142,7 +142,7 @@ KC_1, XXXXXXX, KC_SPC, KC_2
 RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_5, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
 XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX
+XXXXXXX, KC_SPC, XXXXXXX
 
 #define PlopLayout(row1, row2, row3) \
 KC_ESC, row1, KC_BSPC, \
