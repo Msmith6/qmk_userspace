@@ -1,0 +1,11 @@
+{
+    "keyboard": "pochi/hotswap",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_pochi",
+    "layers": [
+        ["Pochi_BASE"],
+        ["Pochi_LOWER"],
+        ["Pochi_RAISE"],
+        ["Pochi_MISC"]
+    ]
+}

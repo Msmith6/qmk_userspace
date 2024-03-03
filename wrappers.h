@@ -12,6 +12,8 @@
 #define LAYOUT_wrapper_qaz(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_wrapper_apricot(...) LAYOUT_wkl_big_bar(__VA_ARGS__)
 #define LAYOUT_wrapper_cisne(...) LAYOUT_big_enter(__VA_ARGS__)
+#define LAYOUT_wrapper_pochi(...) LAYOUT_basic(__VA_ARGS__)
+#define LAYOUT_wrapper_equinox(...) LAYOUT_big(__VA_ARGS__)
 
 #define _QWERTY 0
 #define _LOWER 1
@@ -55,13 +57,13 @@
 
 #define RAISE_ROW1              KC_ESC, XXXXXXX, KC_LGUI, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
 #define RAISE_ROW2              KC_LCTL, KC_LALT, _______, SFT_TAB, XXXXXXX, XXXXXXX, KC_LEFT, RSE_DWN,   KC_UP, KC_RGHT
-#define RAISE_ROW3              _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, KC_BSPC,  KC_DEL, XXXXXXX, KC_ENT
+#define RAISE_ROW3              _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, KC_BSPC,  KC_DEL, XXXXXXX, CHAT_ENT
 #define RAISE_ROW3_QAZ          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, KC_BSPC,  KC_DEL, KC_ENT
 
 #define MISC_ROW1               KC_F9, KC_F10, KC_F11, KC_F12, KC_RCTL, QK_BOOT, COL_BLCK, CPY_DOWN, CPY_UP, EXP_BLCK
 #define MISC_ROW2               KC_F5, KC_F6, KC_F7, KC_F8, _______, _______, MV_LEFT, MV_DOWN, MV_UP, MV_RGHT
-#define MISC_ROW3               KC_F1, KC_F2, KC_F3, KC_F4, KC_RALT, XXXXXXX, DEL_LINE, XXXXXXX, XXXXXXX, _______
-#define MISC_ROW3_QAZ           KC_F1, KC_F2, KC_F3, KC_F4, KC_RALT, XXXXXXX, DEL_LINE, XXXXXXX, _______
+#define MISC_ROW3               KC_F1, KC_F2, KC_F3, KC_F4, KC_RALT, KC_PSCR, DEL_LINE, XXXXXXX, XXXXXXX, _______
+#define MISC_ROW3_QAZ           KC_F1, KC_F2, KC_F3, KC_F4, KC_RALT, KC_PSCR, DEL_LINE, XXXXXXX, _______
 
 #define THE30_BASE BASE_ROW1, BASE_ROW2, BASE_ROW3_30PERCENT
 #define THE30_LOWER LOWER_ROW1, LOWER_ROW2, LOWER_ROW3_30PERCENT
@@ -160,10 +162,10 @@ _______, _______, _______, _______, _______, _______, _______, _______
 
 
 #define HiFinger75Layout(row1, row2, row3) \
-KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_DEL, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, \
-KC_TAB, row1, CHAT_ENT, KC_P7, KC_P8, KC_P9, KC_PPLS, \
-KC_LCTL, row2, KC_P4, KC_P5, KC_P6, KC_PPLS, \
-KC_LSFT, XXXXXXX, row3, KC_UP, KC_P1, KC_P2, KC_P3, KC_PENT, \
+KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_DEL, KC_NUM_LOCK, KC_PSLS, KC_PAST, KC_PMNS, \
+KC_TAB, row1, KC_BSPC, KC_P7, KC_P8, KC_P9, \
+KC_LCTL, row2, KC_P4, KC_P5, KC_P6, KC_PPLS,\
+KC_LSFT, row3, KC_UP, KC_P1, KC_P2, KC_P3, \
 KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, TO(_GAME), KC_LEFT, KC_DOWN, KC_RGHT, KC_P0, KC_PDOT, KC_PENT
 
 #define HiFinger75_BASE  HiFinger75Layout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
@@ -172,17 +174,17 @@ KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, TO(_GAME), KC_LEFT, KC_DOWN, KC_RGHT
 #define HiFinger75_MISC  HiFinger75Layout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
 
 #define HiFinger75_GAME \
-KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_DEL, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, \
-KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, CHAT_ENT, KC_P7, KC_P8, KC_P9, KC_PPLS, \
-KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_P4, KC_P5, KC_P6, KC_PPLS, \
-KC_LSFT, KC_SLSH, KC_Z, KC_X, LT(_GAME_EXTRA, KC_C), LT(_GAME_EXTRA, KC_V), KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_LSFT, KC_UP, KC_P1, KC_P2, KC_P3, KC_PENT, \
+KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_DEL, KC_NUM_LOCK, KC_PSLS, KC_PAST, KC_PMNS, \
+KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC, KC_P7, KC_P8, KC_P9, \
+KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, CHAT_ENT, KC_P4, KC_P5, KC_P6, KC_PPLS,\
+KC_LSFT, KC_Z, KC_X, LT(_GAME_EXTRA, KC_C), LT(_GAME_EXTRA, KC_V), KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_LSFT, KC_UP, KC_P1, KC_P2, KC_P3, \
 KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, TG(_GAME), KC_LEFT, KC_DOWN, KC_RGHT, KC_P0, KC_PDOT, KC_PENT
 
 #define HiFinger75_GAME_EXTRA \
 _______, ALT_1, ALT_2, ALT_3, ALT_4, ALT_5, _______, _______, KC_PSCR, LALT(KC_F9), LALT(KC_F10), _______, _______, _______, _______, _______, _______, \
-_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
-_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 
 #define LesovozLayout(row1, row2, row3) \
@@ -198,7 +200,7 @@ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX, 
 
 #define RibbonLayout(row1, row2, row3) \
 KC_ESC, row1, KC_BSPC, \
-KC_TAB, row2, KC_ENT, \
+KC_TAB, row2, \
 KC_LSFT, row3, \
 XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, MO(4)
 
@@ -208,7 +210,7 @@ XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, MO(4)
 #define Ribbon_MISC  RibbonLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
 #define Ribbon_RGB \
 RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
 _______, _______, _______, _______, _______
 
@@ -245,3 +247,25 @@ XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX, XXXXXXX
 #define Cisne_LOWER CisneLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
 #define Cisne_RAISE CisneLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
 #define Cisne_MISC  CisneLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+
+#define PochiLayout(row1, row2, row3) \
+KC_ESC, row1, KC_BSPC, \
+KC_TAB, row2, \
+KC_LSFT, row3, \
+XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define Pochi_BASE  PochiLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
+#define Pochi_LOWER PochiLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
+#define Pochi_RAISE PochiLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Pochi_MISC  PochiLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+
+#define EquinoxLayout(row1, row2, row3) \
+KC_ESC, row1, KC_BSPC, \
+KC_TAB, row2, \
+KC_LSFT, row3, \
+XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX
+
+#define Equinox_BASE  EquinoxLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
+#define Equinox_LOWER EquinoxLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
+#define Equinox_RAISE EquinoxLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Equinox_MISC  EquinoxLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)

@@ -1,0 +1,11 @@
+{
+    "keyboard": "ai03/equinox/rev1",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_equinox",
+    "layers": [
+        ["Equinox_BASE"],
+        ["Equinox_LOWER"],
+        ["Equinox_RAISE"],
+        ["Equinox_MISC"]
+    ]
+}
