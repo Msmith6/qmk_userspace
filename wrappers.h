@@ -14,6 +14,7 @@
 #define LAYOUT_wrapper_cisne(...) LAYOUT_big_enter(__VA_ARGS__)
 #define LAYOUT_wrapper_pochi(...) LAYOUT_basic(__VA_ARGS__)
 #define LAYOUT_wrapper_equinox(...) LAYOUT_big(__VA_ARGS__)
+#define LAYOUT_wrapper_minne_topre(...) LAYOUT_7u(__VA_ARGS__)
 
 #define _QWERTY 0
 #define _LOWER 1
@@ -269,3 +270,14 @@ XXXXXXX, XXXXXXX, KC_SPC, XXXXXXX, XXXXXXX
 #define Equinox_LOWER EquinoxLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
 #define Equinox_RAISE EquinoxLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
 #define Equinox_MISC  EquinoxLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)
+
+#define MinneTopreLayout(row1, row2, row3) \
+KC_ESC, row1, KC_BSPC, \
+KC_TAB, row2, KC_ENT, \
+KC_LSFT, row3, KC_RSFT, \
+XXXXXXX, KC_SPC, XXXXXXX
+
+#define Minne_Topre_BASE  MinneTopreLayout(BASE_ROW1, BASE_ROW2, BASE_ROW3)
+#define Minne_Topre_LOWER MinneTopreLayout(LOWER_ROW1, LOWER_ROW2, LOWER_ROW3)
+#define Minne_Topre_RAISE MinneTopreLayout(RAISE_ROW1, RAISE_ROW2, RAISE_ROW3)
+#define Minne_Topre_MISC  MinneTopreLayout(MISC_ROW1, MISC_ROW2, MISC_ROW3)

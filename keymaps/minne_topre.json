@@ -1,0 +1,11 @@
+{
+    "keyboard": "viktus/minne_topre",
+    "keymap": "msmith6",
+    "layout": "LAYOUT_wrapper_minne_topre",
+    "layers": [
+        ["Minne_Topre_BASE"],
+        ["Minne_Topre_LOWER"],
+        ["Minne_Topre_RAISE"],
+        ["Minne_Topre_MISC"]
+    ]
+}
